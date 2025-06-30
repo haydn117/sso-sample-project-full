@@ -1,0 +1,1 @@
+<html><body><jsp:include page='${body}' /></body></html>
