@@ -1,1 +1,48 @@
-body { font-family: Arial; }
+body {
+  font-family: 'Malgun Gothic', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f4f4f4;
+}
+
+header, footer {
+  background-color: #004080;
+  color: white;
+  padding: 10px;
+  text-align: center;
+}
+
+nav a {
+  margin: 0 15px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+main {
+  padding: 20px;
+  min-height: 400px;
+  background: white;
+  margin: 10px auto;
+  width: 80%;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+table, th, td {
+  border: 1px solid #ccc;
+}
+
+th {
+  background-color: #eee;
+}
+
+button {
+  padding: 5px 10px;
+  margin: 5px;
+}
