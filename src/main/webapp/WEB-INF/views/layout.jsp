@@ -1,5 +1,6 @@
 <%@ page contentType="text/html;charset=UTF-8" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -19,8 +20,13 @@
   </header>
 
   <main>
+    <c:import url="${body}" />
+  </main>
+  <!--
+  <main>
     <jsp:include page="${body}" />
   </main>
+  -->
 
   <footer>
     <p>© 2025 MySSO Corp. All rights reserved.</p>

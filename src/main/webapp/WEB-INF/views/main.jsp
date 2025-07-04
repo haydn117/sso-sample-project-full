@@ -1,7 +1,5 @@
-/* ======================== main.jsp (대시보드) ========================= */
 
 <%@ page contentType="text/html;charset=UTF-8" %>
-<%@ include file="layout.jsp" %>
 <div class="container">
   <h2>대시보드</h2>
   <div class="card-grid">
