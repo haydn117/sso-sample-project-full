@@ -12,13 +12,22 @@
   <mvc:annotation-driven />
 
   <!-- Controller, Service, DAO 등 컴포넌트 스캔 -->
-  <context:component-scan base-package="com.example.sso" />
+  <context:component-scan base-package="com.example" />
 
   <!-- View Resolver 설정 -->
   <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
     <property name="prefix" value="/WEB-INF/views/" />
     <property name="suffix" value=".jsp" />
   </bean>
+
+  <!-- MyBatis Mapper Scan -->
+    <context:component-scan base-package="com.example.mapper" />
+
+  <!-- MyBatis Mapper Interface와 XML 연결 -->
+    <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+      <property name="basePackage" value="com.example.mapper" />
+    </bean>
+
 
   <!-- 정적 리소스 핸들링 -->
   <mvc:resources mapping="/resources/**" location="/resources/" />

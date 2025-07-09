@@ -8,6 +8,26 @@
           http://www.springframework.org/schema/context
           http://www.springframework.org/schema/context/spring-context.xsd">
 
+<!-- DataSource -->
+<bean id="dataSource" class="org.apache.commons.dbcp2.BasicDataSource">
+    <property name="driverClassName" value="org.mariadb.jdbc.Driver" />
+    <property name="url" value="jdbc:mariadb://localhost:3307/chatgpt" />
+    <property name="username" value="root" />
+    <property name="password" value="1234" />
+</bean>
+
+<!-- SqlSessionFactory -->
+<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+    <property name="dataSource" ref="dataSource" />
+    <property name="mapperLocations" value="classpath:/mapper/*.xml" />
+</bean>
+
+<!-- SqlSessionTemplate -->
+<bean id="sqlSession" class="org.mybatis.spring.SqlSessionTemplate">
+    <constructor-arg index="0" ref="sqlSessionFactory" />
+</bean>
+
+
     <!-- 여기에 Bean 정의가 들어갑니다 (예: Service, Repository 등) -->
     
 </beans>
